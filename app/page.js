@@ -193,10 +193,10 @@ export default function Home() {
                           }}
                         />
                       </div>
-                      <div className="flex flex-col info justify-center">
+                      <div className="md:ml-2 flex flex-col info justify-center">
                         <span className="name flex items-center gap-[4px]">
                           <span
-                            className="lh-1 h-[12px]text-center"
+                            className="lh-1 h-[12px] text-center"
                             style={{
                               fontSize:
                                 "clamp(14px, calc((22 / 1920) * 100vw), 26px)",

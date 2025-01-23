@@ -1,13 +1,13 @@
 .wrapper{
     height: 100vh;
-    padding: calc((22 / 1920) * 100vw);
+    padding: calc((22 / 1920) * 100vw) calc((22 / 1920) * 100vw);
     display: flex;
     gap: calc((20 / 1920) * 100vw);
     overflow-y: hidden;
     background-color: #000000;
 
-    @media (max-width: 102px) {
-        padding: 0;
+    @media (max-width: 1024px) {
+        padding: 10;
         gap: 0;
     }
 }
@@ -35,6 +35,10 @@
 .card-wrapper {
     margin-top: calc((64 / 1080) * 100vh);
     gap: calc((20 / 1920) * 100vw);
+    
+    @media (max-width: 1024px) {
+        gap: 20px;
+    }
 }
 
 .card-item {
@@ -47,6 +51,13 @@
 
     &:hover {
         border: 1px solid #cccccc;
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        min-height: auto;
+        padding: 24px;
+        height: fit-content;
     }
 }
 

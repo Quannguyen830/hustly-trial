@@ -136,11 +136,42 @@
     opacity: 0;
     transform: translateX(100%);
     transition: opacity 1s ease, transform 1s ease;
+
+    @media (max-width: 1024px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 50;
+        display: none;
+    }
 }
 
 .modal-detail.show {
     opacity: 1;
     transform: translateX(0);
+
+    @media (max-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Update sidebar-wrapper inside modal-detail */
+.modal-detail .sidebar-wrapper {
+    @media (max-width: 1024px) {
+        position: relative;
+        width: 90%;
+        max-width: 420px;
+        height: auto;
+        margin: 20px;
+        border-radius: 20px;
+        top: auto;
+        left: auto;
+    }
 }
 
 .m-title {

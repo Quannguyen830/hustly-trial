@@ -128,12 +128,19 @@ const ModalDetail = ({ isOpen, setIsOpen, check }) => {
     return subOption ? subOption?.label : "Not found";
   }
 
+  const handleOutsideClick = (e) => {
+    if (e.target.classList.contains('modal-detail')) {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <>
       <div
         className={`flex w-100 justify-end flex-1 modal-detail ${
           isOpen ? "show" : ""
         }`}
+        onClick={handleOutsideClick}
       >
         <div className="sidebar-wrapper bg-[#171717] text-white rounded-[20px] max-h-[100vh] overflow-y-auto">
           {isLoading ? (
