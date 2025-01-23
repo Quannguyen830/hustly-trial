@@ -165,7 +165,7 @@ const ModalDetail = ({ isOpen, setIsOpen, check }) => {
                   />
                 </div>
                 <div
-                  className="flex flex-col justify-center info gap-[8px]"
+                  className="flex flex-col md:ml-2 justify-center info gap-[8px]"
                   style={{
                     width: "calc(100vw - (64 / 1920) * 100vw)",
                   }}
