@@ -5,6 +5,11 @@
     gap: calc((20 / 1920) * 100vw);
     overflow-y: hidden;
     background-color: #000000;
+
+    @media (max-width: 102px) {
+        padding: 0;
+        gap: 0;
+    }
 }
 
 .news-wrapper {

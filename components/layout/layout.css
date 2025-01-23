@@ -3,6 +3,20 @@
     padding: calc((28 / 1920) * 100vw);
     display: flex;
     flex-direction: column;
+    
+    @media (max-width: 1024px) {
+        top: calc((22 / 1920) * 100vw);
+        left: calc((22 / 1920) * 100vw);
+        z-index: 40;
+        background-color: #171717;
+        position: fixed;
+        width: 320px;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        border-radius: 0;
+    }
 }
 
 .sidebar-header {
@@ -32,7 +46,7 @@
     }
 
     .search-input {
-        width: calc((320 / 1920) * 100vw);
+        width: 100%;
         height: calc((52 / 1080) * 100vh);
         padding-left: calc((16 / 1920) * 100vw);
         box-sizing: border-box;
@@ -41,8 +55,9 @@
         background-color: #222222;
         font-size: clamp(10px, calc((14 / 1920) * 100vw), 26px);
 
-        &:focus {
-            outline: 1px solid #222222;
+        @media (max-width: 1024px) {
+            padding-left: 16px;
+            font-size: 14px;
         }
     }
 

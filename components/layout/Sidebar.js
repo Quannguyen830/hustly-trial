@@ -45,6 +45,7 @@ const Sidebar = ({
   const [isClear, setIsClear] = useState(false);
   const [ageValue, setAgeValue] = useState({ min: 18, max: 40 });
   const [isUnread, setIsUnread] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const response = null;
 
@@ -161,7 +162,35 @@ const Sidebar = ({
 
   return (
     <>
-      <div className="h-[95vh] bg-[#171717] rounded-[20px] sidebar-wrapper">
+      <button 
+        className="lg:hidden fixed top-4 left-4 z-50 bg-[#171717] p-2 rounded-full"
+        onClick={() => setIsCollapsed(!isCollapsed)}
+      >
+        <svg 
+          xmlns="http://www.w3.org/dialog/2000/svg" 
+          className="h-6 w-6 text-white"
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          {isCollapsed ? (
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"/>
+          ) : (
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+          )}
+        </svg>
+      </button>
+
+      {!isCollapsed && (
+        <div 
+          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
+          onClick={() => setIsCollapsed(true)}
+        />
+      )}
+
+      <div className={`h-[95vh] bg-[#171717] rounded-[20px] sidebar-wrapper transition-all duration-300 ${
+        isCollapsed ? 'translate-x-[-100%]' : 'translate-x-0'
+      } lg:translate-x-0`}>
         {isSidebarLoading ? (
           <>
             <div className="w-100 h-[100vh] flex items-center justify-center text-white font-[500] text-[24px]">
