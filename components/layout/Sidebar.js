@@ -163,7 +163,7 @@ const Sidebar = ({
   return (
     <>
       <button 
-        className="lg:hidden fixed top-4 left-4 z-50 bg-[#171717] p-2 rounded-full"
+        className="fixed top-4 left-4 z-50 bg-[#171717] p-2 rounded-full"
         onClick={() => setIsCollapsed(!isCollapsed)}
       >
         <svg 
@@ -183,14 +183,14 @@ const Sidebar = ({
 
       {!isCollapsed && (
         <div 
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
+          className="fixed inset-0 bg-black bg-opacity-50 z-30"
           onClick={() => setIsCollapsed(true)}
         />
       )}
 
       <div className={`h-[95vh] bg-[#171717] rounded-[20px] sidebar-wrapper transition-all duration-300 ${
         isCollapsed ? 'translate-x-[-100%]' : 'translate-x-0'
-      } lg:translate-x-0`}>
+      }`}>
         {isSidebarLoading ? (
           <>
             <div className="w-100 h-[100vh] flex items-center justify-center text-white font-[500] text-[24px]">

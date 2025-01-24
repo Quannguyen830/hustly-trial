@@ -15,6 +15,7 @@ import { BeatLoader } from "react-spinners";
 import { getSuggestions } from "@/api/profile";
 import InfiniteScroll from "react-infinite-scroller";
 import DefaultAvatar from "@/public/images/user-default.jpg";
+import Toolbox from '@/components/common/Toolbox';
 
 export default function Home() {
   const filterData = useSelector((state) => state.suggestion.filterData);
@@ -144,6 +145,14 @@ export default function Home() {
     return rgbToHex(r, g, b);
   }
 
+  const handleSearch = (term) => {
+    // Implement search logic here
+  };
+
+  const handleSort = (criteria) => {
+    // Implement sorting logic here
+  };
+
   return (
     <>
       <div className="news-wrapper">
@@ -153,6 +162,9 @@ export default function Home() {
           </span>
           <span className="description">Have you found a partner yet?</span>
         </div>
+        
+        <Toolbox onSearch={handleSearch} onSort={handleSort} />
+
         <InfiniteScroll
           loadMore={loadChild}
           hasMore={hasMore}

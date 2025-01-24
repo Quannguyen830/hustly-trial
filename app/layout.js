@@ -199,7 +199,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Provider store={store}>
-          <AppContent>{children}</AppContent>
+            <AppContent>{children}</AppContent>
         </Provider>
       </body>
     </html>

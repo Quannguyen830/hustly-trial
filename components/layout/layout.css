@@ -4,19 +4,17 @@
     display: flex;
     flex-direction: column;
     
-    @media (max-width: 1024px) {
-        top: calc((22 / 1920) * 100vw);
-        left: calc((22 / 1920) * 100vw);
-        z-index: 40;
-        background-color: #171717;
-        position: fixed;
-        width: 320px;
-        padding: 20px;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        border-radius: 0;
-    }
+    top: calc((22 / 1920) * 100vw);
+    left: calc((22 / 1920) * 100vw);
+    z-index: 40;
+    background-color: #171717;
+    position: fixed;
+    width: 320px;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    border-radius: 0;
 }
 
 .sidebar-header {
@@ -137,41 +135,34 @@
     transform: translateX(100%) scale(0.5);
     transition: opacity 1s ease, transform 1s ease;
 
-    @media (max-width: 1024px) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 50;
-        display: none;
-    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    display: none;
 }
 
 .modal-detail.show {
     opacity: 1;
     transform: translateX(0) scale(1);
 
-    @media (max-width: 1024px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Update sidebar-wrapper inside modal-detail */
 .modal-detail .sidebar-wrapper {
-    @media (max-width: 1024px) {
-        position: relative;
-        width: 90%;
-        max-width: 420px;
-        height: auto;
-        margin: 20px;
-        border-radius: 20px;
-        top: auto;
-        left: auto;
-    }
+    position: relative;
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+    margin: 20px;
+    border-radius: 20px;
+    top: auto;
+    left: auto;
 }
 
 .m-title {
@@ -226,4 +217,22 @@
     font-weight: 500;
     line-height: clamp(10px, calc((15 / 1920) * 100vw), 25px);
     cursor: pointer;
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-wrapper {
+        grid-template-columns: 1fr;
+    }
 }

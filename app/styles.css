@@ -14,7 +14,7 @@
 
 .news-wrapper {
     padding-top: calc((90 / 1080) * 100vh);
-    margin-left: calc((100 / 1920) * 100vw);
+    margin-left: calc((20 / 1920) * 100vw);
     overflow-y: auto;
 }
 
@@ -44,7 +44,7 @@
 .card-item {
     border: 1px solid #363636;
     border-radius: 20px;
-    width: calc((454 / 1920) * 100vw);
+    width: calc((440 / 1920) * 100vw);
     min-height: calc((288 / 1080) * 100vh);
     cursor: pointer;
     padding: calc((24 / 1920) * 100vw);
@@ -114,4 +114,52 @@
         gap: calc((8 / 1920) * 100vw);
         margin-top: calc((20 / 1080) * 100vh);
     }
+}
+
+.toolbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-input {
+    padding: 12px 16px; 
+    border: 1px solid #2e2e2e; 
+    border-radius: 8px;
+    width: 250px;
+    background-color: #1f1f1f; 
+    color: #ffffff; 
+    font-size: 16px; 
+    transition: border-color 0.3s; 
+}
+
+.search-input::placeholder {
+    color: #9b9b9b;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+.sort-wrapper {
+    position: relative;
+}
+
+.sort-select {
+    padding: 12px 16px; 
+    border: 1px solid #2e2e2e;
+    border-radius: 8px; 
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-size: 16px; 
+    transition: border-color 0.3s; 
+    appearance: none;
+    cursor: pointer;
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: #ffffff;
 }
