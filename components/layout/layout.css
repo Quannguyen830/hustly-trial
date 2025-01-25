@@ -32,15 +32,15 @@
         justify-content: space-between;
         margin-bottom: calc((24 / 1080) * 100vh);
 
-        .logo-container {
+        /* .logo-container {
             width: calc((120 / 1920) * 100vw);
             height: calc((42 / 1080) * 100vh);
-        }
+        } */
 
-        .search-container {
+        /* .search-container {
             width: calc((26 / 1920) * 100vw);
             height: calc((26 / 1080) * 100vh);
-        }
+        } */
     }
 
     .search-input {

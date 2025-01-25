@@ -72,6 +72,12 @@
         background-color: #B8B8B8;
         border-radius: 50%;
         margin-right: calc((12 / 1920) * 100vw);
+
+        @media (max-width: 768px) {
+            min-width: calc((150 / 1920) * 100vw);
+            min-height: calc((150 / 1920) * 100vw);
+            margin-right: 10px;
+        }
     }
 
     .info {
@@ -163,3 +169,4 @@
     outline: none;
     border-color: #ffffff;
 }
+

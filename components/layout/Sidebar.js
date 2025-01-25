@@ -201,23 +201,23 @@ const Sidebar = ({
           <>
             <div className="sidebar-header">
               <div className="sb-wrapper">
-                <div className="logo-container" onClick={handleOpenNews}>
+                <div className="logo-container w-[80px] md:w-[100px]" onClick={handleOpenNews}>
                   <Image
                     src={Logo}
                     alt="logo"
                     className="image"
-                    style={{ objectFit: "contain" }}
+                    // style={{ objectFit: "contain" }}
                   />
                 </div>
                 <div
-                  className="search-container relative"
+                  className="search-container relative w-[20px] md:w-[25px]"
                   onClick={handleOpenChat}
                 >
                   <Image
                     src={Search}
                     alt="search"
                     className="image"
-                    style={{ objectFit: "contain" }}
+                    // style={{ objectFit: "contain" }}
                     onClick={handleOpenChat}
                   />
                   {isUnread && (
